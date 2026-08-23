@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SansaPet - 8-Bit Virtual Pet</title>
+  <!-- Google Fonts: Retro 8-bit & Arcade styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cabinet-container">
+    <!-- Arcade marquee header -->
+    <header class="arcade-header">
+      <div class="marquee-title">SANSA SIMULATOR</div>
+      <div class="marquee-subtitle">★ 8-BIT SWEET PUPPY COMPANION ★</div>
+    </header>
+
+    <!-- LCD Bezel / Screen -->
+    <div class="lcd-bezel">
+      <div class="lcd-screen">
+        
+        <div class="screen-header">
+          <span class="sim-tag">PET: SANSA (DOG)</span>
+          <span class="status-indicator" id="status-badge">STATUS: HAPPY</span>
+        </div>
+
+        <!-- Sansa Pixel Art Viewport -->
+        <div class="pet-viewport">
+          <div id="sansa-sprite" class="sansa-pixel-box">
+            <svg id="sansa-svg" viewBox="0 0 32 32" class="pixel-dog-svg">
+              <!-- Rendered via script.js -->
+            </svg>
+          </div>
+        </div>
+
+        <!-- Stats panel -->
+        <div class="stats-panel">
+          <div class="stat-row">
+            <span class="stat-label">HUNGER</span>
+            <div class="stat-meter-track">
+              <div id="hunger-bar" class="stat-meter-fill fill-hunger" style="width: 100%;"></div>
+            </div>
+            <span id="hunger-num" class="stat-value">10/10</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-label">ENERGY</span>
+            <div class="stat-meter-track">
+              <div id="energy-bar" class="stat-meter-fill fill-energy" style="width: 100%;"></div>
+            </div>
+            <span id="energy-num" class="stat-value">10/10</span>
+          </div>
+
+          <div class="stat-row">
+            <span class="stat-label">SOCIAL</span>
+            <div class="stat-meter-track">
+              <div id="social-bar" class="stat-meter-fill fill-social" style="width: 100%;"></div>
+            </div>
+            <span id="social-num" class="stat-value">10/10</span>
+          </div>
+        </div>
+
+        <!-- Messages and alerts -->
+        <div class="message-box">
+          <p id="system-message" class="system-message">Welcome to Sansa Simulator!</p>
+          <p id="alert-message" class="alert-message"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Candy Arcade Control Buttons -->
+    <div class="arcade-controls">
+      <div class="button-grid">
+        <button id="btn-play" class="arcade-btn btn-play" onclick="handlePlay()">
+          <span class="btn-top">🎾 PLAY [P]</span>
+        </button>
+
+        <button id="btn-eat" class="arcade-btn btn-eat" onclick="handleEat()">
+          <span class="btn-top">🍖 EAT [E]</span>
+        </button>
+
+        <button id="btn-sleep" class="arcade-btn btn-sleep" onclick="handleSleep()">
+          <span class="btn-top">💤 SLEEP [S]</span>
+        </button>
+
+        <button id="btn-reset" class="arcade-btn btn-reset" onclick="handleReset()">
+          <span class="btn-top">🔄 RESET [R]</span>
+        </button>
+      </div>
+      <div class="keyboard-hint">Click buttons or press keys [P], [E], [S], [R]</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
