@@ -1,34 +1,34 @@
 import java.util.Scanner;
 
-public class SansaPet {
+public class HelloWorld {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Initial statistics (Hunger, Energy, Social)
+        // Estadísticas iniciales (Hunger, Energy, Social)
         int hunger = 10;
         int energy = 10;
         int social = 10;
         boolean isRunning = true;
 
         System.out.println("=========================================");
-        System.out.println("       Welcome to Sansa Simulator!       ");
+        System.out.println("      ¡Bienvenido al simulador Roxie!    ");
         System.out.println("=========================================");
 
         while (isRunning) {
-            // Main display with puppy ASCII art and current stats
-            System.out.println("\nName of Sim: Sansa");
-            System.out.println("   / \\__");
-            System.out.println("  (    @\\___");
-            System.out.println("  /         O");
-            System.out.println(" /   (_____/");
-            System.out.println("/_____/   U");
+            // Mostrar pantalla principal con ASCII Art y estado actual
+            System.out.println("\nName of Sim: Roxie");
+            System.out.println(" |\\__/,|   (`\\");
+            System.out.println(" |o o  |__ _)");
+            System.out.println(" _.( T   )  `  /");
+            System.out.println("((_ `^--' /_<  \\");
+            System.out.println("`` `-'(((/  (((/");
             System.out.println();
             System.out.println("Hunger : " + hunger);
             System.out.println("Energy : " + energy);
             System.out.println("Social : " + social);
             System.out.println("-----------------------------------------");
-            System.out.println("Available commands:");
-            System.out.println(" [p] Play   [e] Eat   [s] Sleep   [q] Quit");
+            System.out.println("Comandos disponibles:");
+            System.out.println(" [p] Jugar (Play)   [e] Comer (Eat)   [s] Dormir (Sleep)   [q] Salir (Quit)");
             System.out.print("What's your next action? > ");
 
             String input = scanner.nextLine().trim().toLowerCase();
@@ -36,56 +36,56 @@ public class SansaPet {
             switch (input) {
                 case "p":
                     if (energy < 2) {
-                        System.out.println("\n>>> Sansa is too tired to play right now!");
+                        System.out.println("\n>>> ¡Roxie está demasiado cansada para jugar!");
                     } else {
                         hunger = Math.max(0, hunger - 2);
                         energy = Math.max(0, energy - 2);
                         social = Math.min(10, social + 3);
-                        System.out.println("\n>>> You played with Sansa! She's wagging her tail (+3 Social, -2 Hunger, -2 Energy).");
+                        System.out.println("\n>>> ¡Jugaste con Roxie! Se siente muy feliz y acompañada (+3 Social, -2 Hunger, -2 Energy).");
                     }
                     break;
 
                 case "e":
                     if (hunger >= 10) {
-                        System.out.println("\n>>> Sansa is already full, she doesn't want more treats.");
+                        System.out.println("\n>>> Roxie ya está llena, no quiere comer más.");
                     } else {
                         hunger = Math.min(10, hunger + 3);
                         energy = Math.max(0, energy - 1);
-                        System.out.println("\n>>> You gave Sansa a treat (+3 Hunger, -1 Energy).");
+                        System.out.println("\n>>> Le diste un bocadillo a Roxie (+3 Hunger, -1 Energy).");
                     }
                     break;
 
                 case "s":
                     if (energy >= 10) {
-                        System.out.println("\n>>> Sansa is not sleepy at the moment.");
+                        System.out.println("\n>>> Roxie no tiene sueño en este momento.");
                     } else {
                         energy = 10;
                         hunger = Math.max(0, hunger - 2);
                         social = Math.max(0, social - 1);
-                        System.out.println("\n>>> Sansa took a refreshing nap (Energy fully restored, -2 Hunger, -1 Social).");
+                        System.out.println("\n>>> Roxie tomó una siesta reparadora (Energy al máximo, -2 Hunger, -1 Social).");
                     }
                     break;
 
                 case "q":
-                    System.out.println("\nThanks for taking care of Sansa! See you soon.");
+                    System.out.println("\n¡Gracias por cuidar a Roxie! Hasta pronto.");
                     isRunning = false;
                     break;
 
                 default:
-                    System.out.println("\n>>> Unknown command. Please enter 'p', 'e', 's', or 'q'.");
+                    System.out.println("\n>>> Comando no reconocido. Usa 'p', 'e', 's' o 'q'.");
                     break;
             }
 
-            // Stat warnings
+            // Chequeo de advertencias según el estado de la mascota
             if (isRunning) {
                 if (hunger <= 2) {
-                    System.out.println("⚠️  Warning! Sansa is very hungry.");
+                    System.out.println("⚠️  ¡Alerta! Roxie tiene mucha hambre.");
                 }
                 if (energy <= 2) {
-                    System.out.println("⚠️  Warning! Sansa needs to sleep soon.");
+                    System.out.println("⚠️  ¡Alerta! Roxie necesita dormir pronto.");
                 }
                 if (social <= 2) {
-                    System.out.println("⚠️  Warning! Sansa is feeling lonely.");
+                    System.out.println("⚠️  ¡Alerta! Roxie se siente solitaria.");
                 }
             }
         }
