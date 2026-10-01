@@ -3,7 +3,7 @@
 ![SansaPet Preview](https://img.shields.io/badge/Status-Playable-brightgreen)
 ![Tech Stack](https://img.shields.io/badge/Tech-Java%20%7C%20HTML5%20%7C%20CSS3%20%7C%20JavaScript-blue)
 
-**SansaPet** is a retro-arcade virtual pet simulator inspired by classic Tamagotchis, featuring custom 8-bit SVG pixel art inspired by a real puppy named Sansa.
+**SansaPet** is a retro-arcade virtual pet simulator inspired by classic Tamagotchis, featuring custom 8-bit SVG pixel art inspired by my puppy named Sansa.
 
 🎮 **[Play the Live Game Here!](https://Quintral4.github.io/SansaPet/)**
 
@@ -64,4 +64,3 @@ As part of this project's lifecycle, manual functional testing (E2E) was execute
 * **Frontend:** Vanilla JavaScript (ES6+), HTML5, CSS3
 * **Graphics:** Pixel-art Scalable Vector Graphics (SVG)
 * **Deployment:** GitHub Pages
-
